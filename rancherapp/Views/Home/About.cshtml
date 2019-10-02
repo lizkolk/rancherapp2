@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+<h2>@ViewData["Title"]</h2>
+
+<p>This is everything about Zeploy!</p>
+<br />
+<img src="~/images/zeploy.png" />
+
+<div>
+    <form method="POST">
+        <h2>Liz Test</h2>
+        <div>
+            <label for="urlInput">Enter in some information</label>
+            <input type="text" name="httpUrl" id="urlInput" value=@TempData["Url"] class="form-control" />
+            <br />
+            <input type="submit" value="GET" asp-page-handler="HttpGet" class="btn btn-info">
+        </div>
+    </form>
+</div>
